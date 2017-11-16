@@ -132,3 +132,24 @@ label {
     font-weight: 700;
     letter-spacing: 0.5px;
 }
+
+
+.centrar {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.centrar_v {
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
+}
+
+.centrar_h {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
