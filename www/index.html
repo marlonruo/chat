@@ -747,7 +747,7 @@
                             console.log('Device has been registered.');
 
                             var userPxy = {
-                                'applicationId': 'applozic-sample-app',
+                                'applicationId': '3b66345c921f7a78c8414e15221417cf7',
                                 'userId': $("#userId").val(),
                                 'registrationId': data.registrationId,
                                 'pushNotificationFormat': '1'
@@ -768,7 +768,6 @@
                         });
                     }
                 });
-
                 push.on('notification', function (data) {
                     console.log(data);
                 });
