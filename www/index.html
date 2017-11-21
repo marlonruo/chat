@@ -967,18 +967,13 @@
 				window.location.href = '#chatsito'
 					
 			})
+	
 			
-			
-			
-			alto = $(window).height()
-			$(window).on("resize", function() {
-				alto = $(window).height()
-				$('#login').css('height', alto + 'px')
-			});
-			
-			$('#login').css('height', alto + 'px')
-			
-			
+			function inicio(){
+					var $window = $(window);
+					width = $window.width();
+					height = $window.height();
+					alto = $window.height();
 					$('.textos_exg').css('font-size', height/15+'px')
 					$('.textos_ex').css('font-size', height/22+'px')
 					$('.textos_g').css('font-size', height/32+'px')
@@ -987,8 +982,15 @@
 					$('.textos_cx').css('font-size', height/70+'px')
 
 					$('.iconitos').css('height', height/42+'px')
+					alert(alto)
+					$('#login').css('height', alto + 'px')
+					StatusBar.hide();	
+			}
 					
-			StatusBar.hide();
+			inicio()
+			$(window).on("resize", function() {
+				inicio()
+			});
 			
         </script>
     </body>
