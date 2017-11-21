@@ -968,8 +968,27 @@
 					
 			})
 			
-			$('#login').css('height', '600px')
 			
+			
+			alto = $(window).height()
+			$(window).on("resize", function() {
+				alto = $(window).height()
+				$('#login').css('height', alto + 'px')
+			});
+			
+			$('#login').css('height', alto + 'px')
+			
+			
+					$('.textos_exg').css('font-size', height/15+'px')
+					$('.textos_ex').css('font-size', height/22+'px')
+					$('.textos_g').css('font-size', height/32+'px')
+					$('.textos_m').css('font-size', height/45+'px')
+					$('.textos_c').css('font-size', height/55+'px')	
+					$('.textos_cx').css('font-size', height/70+'px')
+
+					$('.iconitos').css('height', height/42+'px')
+					
+			StatusBar.hide();
 			
         </script>
     </body>
