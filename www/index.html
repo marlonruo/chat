@@ -29,7 +29,10 @@
             }
         </script>
         <script src="applozic/js/jquery-2.2.2.min.js"></script>
-
+        <script type="text/javascript" src="js/jquery.wallform.js"></script>
+		<script type="text/javascript" src="js/nouislider.js"></script> 
+		<script src="js/touch.js" type="text/javascript"></script>
+		<script src="js/swipe.js" type="text/javascript"></script>
         <!-- Applozic Chat -->
 
         <title>ConoceME!</title>
@@ -37,7 +40,6 @@
     <body onLoad="inicio()">
        
        
-     <div id='app' style="position: absolute; width: 100%; height: 100%">  
        
      <div id='crece' style="position:absolute; width:100%; height:140%; display: none"></div>  
        
@@ -190,7 +192,7 @@
   </div><!--//////////////fin login-->  
             
                
-     </div>  <!--//////////////fin app-->            
+                  
                         
        
     <!--///////////////////////////////////////////////-->
@@ -820,7 +822,7 @@
       	
       	
       	
-      	<div id="menu_inicio" class="menu sombra" style="position: absolute; width: 100%; height: 8%; background:#2D2A32; display:block; z-index:9"> 
+      	<div id="menu_inicio" class="menu sombra" style="position: fixed; width: 100%; height: 8%; background:#2D2A32; display:block; z-index:9"> 
   			<img class="centrar" src="img/logo_menu.png" style="height: 80%;"/> 
 		  	<img id="bt_menu" src="img/menu.png" style="height: 60%; top: 20%; left: 30px; position: absolute; cursor: pointer; display:none1"/>
 		  	<img id='bt_chat' src="img/mensaje_blanco.png" style="height: 54%; top: 23%; right: 30px; position: absolute; display: none1"/>
@@ -961,18 +963,16 @@
 			
 			$('#bt_chat').click(function(){
 				//$('#oscurese').fadeOut(500)
-				$('#app').hide()
 				$('#chatsito').show()	
 				window.location.href = '#chatsito'
 					
 			})
 			
-			var $window = $(window);
 			var width
 			var height
 			var alto
 			function inicio(){
-					
+					var $window = $(window);
 					width = $window.width();
 					height = $window.height();
 					alto = $window.height();
@@ -984,13 +984,14 @@
 					$('.textos_cx').css('font-size', height/70+'px')
 
 					$('.iconitos').css('height', height/42+'px')
-					//$('#app').css('height', alto+'px')
-					//$('#menu_inicio').css('height', (alto*.08)+'px')
-
+					alert(alto)
 					StatusBar.hide();
-					//$('#app').css('height', alto+'px')
-					//$('#menu_inicio').css('height', (alto*.08)+'px')
+					
 			}
+			
+			$(window).on("resize", function() {
+				inicio()
+			});
         </script>
     </body>
 </html>
