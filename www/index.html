@@ -37,7 +37,7 @@
 
         <title>ConoceME!</title>
     </head>
-    <body>
+    <body onLoad="inicio()">
        
        
        
@@ -967,8 +967,11 @@
 				window.location.href = '#chatsito'
 					
 			})
-	
 			
+			
+			var width
+			var height
+			var alto
 			function inicio(){
 					var $window = $(window);
 					width = $window.width();
@@ -983,15 +986,10 @@
 
 					$('.iconitos').css('height', height/42+'px')
 					alert(alto)
-					$('#login').css('height', alto + 'px')
 					StatusBar.hide();
-					alert(alto)
-			}
 					
-			inicio()
-			$(window).on("resize", function() {
-				inicio()
-			});
+			}
+			
 			
         </script>
     </body>

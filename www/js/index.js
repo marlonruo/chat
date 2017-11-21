@@ -35,7 +35,6 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 		app.initApplozicChat();
-		StatusBar.hide();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
